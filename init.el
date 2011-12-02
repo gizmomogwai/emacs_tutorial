@@ -61,6 +61,8 @@
          (new-file-name (tff-calc-file-name '(("cpp" "h")("h" "cpp")) '() file-name)))
     (if (not (string= file-name new-file-name)) (find-file new-file-name))))
 
+(global-set-key (kbd "C-1") 'tff)
+
 (expectations
   (desc "nil when no matching extension")
   (expect nil (tff-replace-extension '(("cpp" "h")) "test.rb"))
