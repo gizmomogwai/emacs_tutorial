@@ -63,6 +63,11 @@
 
 (global-set-key (kbd "C-1") 'tff)
 
+(progn
+  (put 'tff-path-mapping 'safe-local-variable 'listp)
+  (put 'tff-extension-mapping 'safe-local-variable 'listp)
+)
+
 (expectations
   (desc "nil when no matching extension")
   (expect nil (tff-replace-extension '(("cpp" "h")) "test.rb"))
