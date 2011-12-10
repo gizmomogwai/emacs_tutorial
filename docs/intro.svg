@@ -8,13 +8,14 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="177165.34"
    height="177165.34"
    id="svg2985"
    version="1.1"
-   inkscape:version="0.48.1 r9760"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="intro.svg">
   <sodipodi:namedview
      inkscape:document-units="mm"
@@ -24,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.45254835"
-     inkscape:cx="15791.985"
-     inkscape:cy="11030.113"
+     inkscape:zoom="0.22642991"
+     inkscape:cx="17817.187"
+     inkscape:cy="14226.233"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="mm"
-     inkscape:window-width="1920"
-     inkscape:window-height="1176"
+     inkscape:window-width="1280"
+     inkscape:window-height="701"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <defs
      id="defs3" />
@@ -66,6 +67,13 @@
          y="-14226.286"
          id="tspan2997"
          style="font-size:72px">Emacs</tspan></text>
+    <image
+       xlink:href="functionCall.svg"
+       id="image3734"
+       height="2000"
+       width="1000"
+       y="-13540"
+       x="15930" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
