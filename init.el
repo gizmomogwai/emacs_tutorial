@@ -22,6 +22,11 @@
         (if finished replaced (tff-replace-with-first-matching-regexp (rest patterns) input)))
     input))
 
+(defun tff-calc-file-name
+  (ext-patterns regexp-patterns input)
+  "replaces the file-extension and the regexp-patterns"
+  (tff-replace-with-first-matching-regexp regexp-patterns (or (tff-replace-extension ext-patterns input) input)))
+
 (expectations
   (desc "nil when no matching extension")
   (expect nil (tff-replace-extension '(("cpp" "h")) "test.rb"))
@@ -32,4 +37,11 @@
   (expect "/some/path/src/test" (tff-replace-with-first-matching-regexp '(("include" "src")("src" "include")) "/some/path/include/test"))
   (desc "no replacement when no regexp matches")
   (expect "/some/path/include/test" (tff-replace-with-first-matching-regexp '(("abc" "def")) "/some/path/include/test"))
- )
+
+  (desc "combine extension and regex replacement")
+  (expect "/some/path/include/test.h" (tff-calc-file-name '(("cpp" "h")) '(("src" "include")) "/some/path/src/test.cpp"))
+  (desc "combine no extension match and regex replacement")
+  (expect "/some/path/include/test.cc" (tff-calc-file-name '(("cpp" "h")) '(("src" "include")) "/some/path/src/test.cc"))
+  (desc "combine extension match and no regex replacement")
+  (expect "/some/path/src/test.h" (tff-calc-file-name '(("cpp" "h")) '(("src2" "include")) "/some/path/src/test.cpp"))
+  )
